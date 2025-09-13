@@ -1,6 +1,29 @@
+# Nuxt
 .nuxt
 dist
-node_modules
 .output
 .nitro
 .cache
+node_modules
+
+# Build outputs
+*.min.js
+*.min.css
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
