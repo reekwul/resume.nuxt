@@ -6,7 +6,9 @@ export default defineNuxtConfig({
     compatibilityDate: '2025-07-15',
     devtools: { enabled: true },
 
-    modules: ['@nuxt/eslint',"@primevue/nuxt-module", '@nuxt/image', '@nuxt/test-utils'],
+    modules: ['@nuxt/eslint', "@primevue/nuxt-module", '@nuxt/image', '@nuxt/test-utils', '@nuxt/fonts'],
+    
+    css:['./assets/main.scss'],
 
     primevue: {
       components:{
@@ -23,7 +25,8 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "./assets/_color.scss" as *;'
+          additionalData: `
+          `
         }
       }
     }

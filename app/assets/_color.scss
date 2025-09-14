@@ -1,5 +1,10 @@
-// ====== ЦВЕТОВАЯ ПАЛИТРА ====== //
+// _variables.scss
+// ===== Шрифты =====
+$font-primary: 'Merriweather', serif;
+$font-heading: 'Montserrat', sans-serif;
+$font-mono: 'Monaco', 'Consolas', 'Monaco', monospace;
 
+// ===== ЦВЕТОВАЯ ПАЛИТРА =====
 // 1. Primary (Основной)
 $color-primary-200: #E0EAFF;
 $color-primary-175: #A9C5FF;
@@ -50,9 +55,7 @@ $color-disable-text: #8C8D92;
 $color-disable-bg: #F5F5F6;
 $color-disable-border: #E8E8E9;
 
-
-// ====== СЕМАНТИЧЕСКИЕ ПЕРЕМЕННЫЕ ДЛЯ УДОБСТВА ====== //
-
+// ===== СЕМАНТИЧЕСКИЕ ПЕРЕМЕННЫЕ ДЛЯ УДОБСТВА =====
 // Primary
 $color-primary: $color-primary-100;
 $color-primary-hover: $color-primary-75;
@@ -85,3 +88,37 @@ $color-disabled: $color-disable-element;
 $color-disabled-text: $color-disable-text;
 $color-disabled-bg: $color-disable-bg;
 $color-disabled-border: $color-disable-border;
+
+// ===== ТИПОГРАФИЧЕСКИЕ ЦВЕТА =====
+$color-text-primary: $color-secondary-0;
+$color-text-secondary: $color-secondary-75;
+$color-text-accent: $color-primary-100;
+$color-text-success: $color-success-75;
+$color-text-warn: $color-warn-75;
+$color-text-error: $color-error-75;
+$color-text-disabled: $color-disabled-text;
+
+$color-background: #fff;
+$color-border: $color-secondary-150;
+$color-code-bg: $color-secondary-200;
+
+// ===== Межстрочные интервалы =====
+$line-height-normal: 1.6;
+$line-height-tight: 1.2;
+$line-height-loose: 1.8;
+
+// ===== Размеры шрифтов =====
+$font-size-base: 1rem;
+$font-size-sm: 0.9rem;
+$font-size-lg: 1.25rem;
+$font-size-xl: 1.5rem;
+$font-size-2xl: 1.75rem;
+$font-size-3xl: 2rem;
+$font-size-4xl: 2.5rem;
+
+// ===== Отступы =====
+$spacing-xs: 0.5rem;
+$spacing-sm: 0.75rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;

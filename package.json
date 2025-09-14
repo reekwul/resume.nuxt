@@ -17,6 +17,7 @@
         "code:fix": "npm run lint:fix && npm run format"
     },
     "dependencies": {
+        "@nuxt/fonts": "^0.11.4",
         "@primeuix/themes": "^1.2.3",
         "nuxt": "^4.1.1",
         "primeicons": "^7.0.0",
