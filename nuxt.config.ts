@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     compatibilityDate: '2025-07-15',
     devtools: { enabled: true },
 
-    modules: ['@nuxt/eslint', "@primevue/nuxt-module", '@nuxt/image', '@nuxt/test-utils', '@nuxt/fonts'],
+    modules: ['@nuxt/eslint', "@primevue/nuxt-module", '@nuxt/image', '@nuxt/test-utils', '@nuxt/fonts', '@pinia/nuxt'],
     
     css:['./assets/main.scss'],
 
