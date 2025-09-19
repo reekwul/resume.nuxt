@@ -1,16 +1,13 @@
-import { defineStore } from "pinia";
-import type { AvatarProps } from "primevue";
+import { defineStore } from 'pinia';
 
-interface User{
-    name: string,
-    avatar: AvatarProps 
+interface User {
+    name: string;
 }
 
-export const useUserStore = defineStore('userStore', ()=>{
-    const user:Ref<null | User> = useState("user", ()=>(null))
-
+export const useUserStore = defineStore('userStore', () => {
+    const user: Ref<null | User> = useState('user', () => null);
 
     return {
-        user
-    }
-})
+        user,
+    };
+});

@@ -37,9 +37,8 @@
         "sass": "^1.92.1",
         "sass-loader": "^16.0.5",
         "typescript": "^5.9.2"
-    }
-    ,
-    "pre-commit":[
+    },
+    "pre-commit": [
         "typecheck",
         "code:check"
     ]

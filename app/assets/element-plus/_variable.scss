@@ -7,287 +7,272 @@
 @use '../color' as custom;
 
 // ===== ПЕРЕОПРЕДЕЛЕНИЕ ПЕРЕМЕННЫХ ELEMENT PLUS =====
-@forward "element-plus/theme-chalk/src/common/var.scss" with (
-  // ===== ЦВЕТА =====
-  $colors: (
-    'white': #ffffff,
-    'black': #000000,
-    'primary': (
-      'base': custom.$color-primary,
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+    // ===== ЦВЕТА =====
+    $colors: (
+            'white': #ffffff,
+            'black': #000000,
+            'primary': (
+                'base': custom.$color-primary,
+            ),
+            'success': (
+                'base': custom.$color-success,
+            ),
+            'warning': (
+                'base': custom.$color-warn,
+            ),
+            'danger': (
+                'base': custom.$color-error,
+            ),
+            'error': (
+                'base': custom.$color-error,
+            ),
+            'info': (
+                'base': custom.$color-secondary-100,
+            )
+        ),
+
+    // ===== ТИПОГРАФИЯ =====
+    $text-color: (
+            'primary': custom.$color-text-primary,
+            'regular': custom.$color-text-secondary,
+            'secondary': custom.$color-secondary-100,
+            'placeholder': custom.$color-secondary-150,
+            'disabled': custom.$color-disabled-text
+        ),
+
+    $border-color: (
+        '': custom.$color-border,
+        'light': custom.$color-secondary-175,
+        'lighter': custom.$color-secondary-200,
+        'extra-light': color.adjust(custom.$color-secondary-200, $lightness: 5%),
+        'dark': custom.$color-secondary-100,
+        'darker': custom.$color-secondary-75
     ),
-    'success': (
-      'base': custom.$color-success,
+
+    $fill-color: (
+        '': custom.$color-secondary-200,
+        'light': custom.$color-secondary-200,
+        'lighter': color.adjust(custom.$color-secondary-200, $lightness: 3%),
+        'extra-light': color.adjust(custom.$color-secondary-200, $lightness: 5%),
+        'dark': color.adjust(custom.$color-secondary-200, $lightness: -3%),
+        'darker': color.adjust(custom.$color-secondary-200, $lightness: -5%),
+        'blank': #ffffff
     ),
-    'warning': (
-      'base': custom.$color-warn,
+
+    $bg-color: (
+        '': custom.$color-background,
+        'page': custom.$color-secondary-200,
+        'overlay': custom.$color-background
     ),
-    'danger': (
-      'base': custom.$color-error,
+
+    // ===== ТИПОГРАФИЧЕСКИЕ НАСТРОЙКИ =====
+    $font-family: (
+            '':
+                "'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif",
+            'primary': custom.$font-primary,
+            'heading': custom.$font-heading,
+            'mono': custom.$font-mono
+        ),
+
+    $font-size: (
+        'extra-large': custom.$font-size-4xl,
+        'large': custom.$font-size-2xl,
+        'medium': custom.$font-size-xl,
+        'base': custom.$font-size-base,
+        'small': custom.$font-size-sm,
+        'extra-small': 0.8rem
     ),
-    'error': (
-      'base': custom.$color-error,
+
+    // ===== ОТСТУПЫ И РАЗМЕРЫ =====
+    $common-component-size: ('large': 40px, 'default': 32px, 'small': 24px),
+    $border-radius: ('base': 4px, 'small': 2px, 'round': 20px, 'circle': 100%),
+    // ===== DISABLED СОСТОЯНИЯ =====
+    $disabled: (
+            'bg-color': custom.$color-disabled-bg,
+            'text-color': custom.$color-disabled-text,
+            'border-color': custom.$color-disabled-border
+        ),
+
+    // ===== КОМПОНЕНТЫ =====
+    $button: (
+            'font-weight': 500,
+            'border-color': custom.$color-border,
+            'bg-color': custom.$color-background,
+            'text-color': custom.$color-text-primary,
+            'disabled-text-color': custom.$color-disabled-text,
+            'disabled-bg-color': custom.$color-disabled-bg,
+            'disabled-border-color': custom.$color-disabled-border,
+            'divide-border-color': rgba(#ffffff, 0.5),
+            'hover-text-color': custom.$color-primary,
+            'hover-bg-color': custom.$color-primary-light,
+            'hover-border-color': custom.$color-primary-light,
+            'active-text-color': custom.$color-primary,
+            'active-border-color': custom.$color-primary,
+            'active-bg-color': custom.$color-primary-light,
+            'outline-color': custom.$color-primary-light,
+            'hover-link-text-color': custom.$color-text-secondary,
+            'active-color': custom.$color-text-primary
+        ),
+
+    $input: (
+        'text-color': custom.$color-text-primary,
+        'border': 1px solid custom.$color-border,
+        'hover-border': 1px solid custom.$color-primary-light,
+        'focus-border': 1px solid custom.$color-primary,
+        'transparent-border': 0 0 0 1px transparent inset,
+        'border-color': custom.$color-border,
+        'border-radius': 4px,
+        'bg-color': custom.$color-background,
+        'icon-color': custom.$color-text-secondary,
+        'placeholder-color': custom.$color-text-secondary,
+        'hover-border-color': custom.$color-primary-light,
+        'clear-hover-color': custom.$color-text-secondary,
+        'focus-border-color': custom.$color-primary,
+        'width': 100%
     ),
-    'info': (
-      'base': custom.$color-secondary-100,
+
+    $input-disabled: (
+        'fill': custom.$color-disabled-bg,
+        'border': custom.$color-disabled-border,
+        'text-color': custom.$color-disabled-text,
+        'placeholder-color': custom.$color-text-secondary
     ),
-  ),
-  
-  // ===== ТИПОГРАФИЯ =====
-  $text-color: (
-    'primary': custom.$color-text-primary,
-    'regular': custom.$color-text-secondary,
-    'secondary': custom.$color-secondary-100,
-    'placeholder': custom.$color-secondary-150,
-    'disabled': custom.$color-disabled-text,
-  ),
-  
-  $border-color: (
-    '': custom.$color-border,
-    'light': custom.$color-secondary-175,
-    'lighter': custom.$color-secondary-200,
-    'extra-light': color.adjust(custom.$color-secondary-200, $lightness: 5%),
-    'dark': custom.$color-secondary-100,
-    'darker': custom.$color-secondary-75,
-  ),
-  
-  $fill-color: (
-    '': custom.$color-secondary-200,
-    'light': custom.$color-secondary-200,
-    'lighter': color.adjust(custom.$color-secondary-200, $lightness: 3%),
-    'extra-light': color.adjust(custom.$color-secondary-200, $lightness: 5%),
-    'dark': color.adjust(custom.$color-secondary-200, $lightness: -3%),
-    'darker': color.adjust(custom.$color-secondary-200, $lightness: -5%),
-    'blank': #ffffff,
-  ),
-  
-  $bg-color: (
-    '': custom.$color-background,
-    'page': custom.$color-secondary-200,
-    'overlay': custom.$color-background,
-  ),
-  
-  // ===== ТИПОГРАФИЧЕСКИЕ НАСТРОЙКИ =====
-  $font-family: (
-    '': "'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif",
-    'primary': custom.$font-primary,
-    'heading': custom.$font-heading,
-    'mono': custom.$font-mono,
-  ),
-  
-  $font-size: (
-    'extra-large': custom.$font-size-4xl,
-    'large': custom.$font-size-2xl,
-    'medium': custom.$font-size-xl,
-    'base': custom.$font-size-base,
-    'small': custom.$font-size-sm,
-    'extra-small': 0.8rem,
-  ),
-  
-  // ===== ОТСТУПЫ И РАЗМЕРЫ =====
-  $common-component-size: (
-    'large': 40px,
-    'default': 32px,
-    'small': 24px,
-  ),
-  
-  $border-radius: (
-    'base': 4px,
-    'small': 2px,
-    'round': 20px,
-    'circle': 100%,
-  ),
-  
-  // ===== DISABLED СОСТОЯНИЯ =====
-  $disabled: (
-    'bg-color': custom.$color-disabled-bg,
-    'text-color': custom.$color-disabled-text,
-    'border-color': custom.$color-disabled-border,
-  ),
-  
-  // ===== КОМПОНЕНТЫ =====
-  $button: (
-    'font-weight': 500,
-    'border-color': custom.$color-border,
-    'bg-color': custom.$color-background,
-    'text-color': custom.$color-text-primary,
-    'disabled-text-color': custom.$color-disabled-text,
-    'disabled-bg-color': custom.$color-disabled-bg,
-    'disabled-border-color': custom.$color-disabled-border,
-    'divide-border-color': rgba(#ffffff, 0.5),
-    'hover-text-color': custom.$color-primary,
-    'hover-bg-color': custom.$color-primary-light,
-    'hover-border-color': custom.$color-primary-light,
-    'active-text-color': custom.$color-primary,
-    'active-border-color': custom.$color-primary,
-    'active-bg-color': custom.$color-primary-light,
-    'outline-color': custom.$color-primary-light,
-    'hover-link-text-color': custom.$color-text-secondary,
-    'active-color': custom.$color-text-primary,
-  ),
-  
-  $input: (
-    'text-color': custom.$color-text-primary,
-    'border': 1px solid custom.$color-border,
-    'hover-border': 1px solid custom.$color-primary-light,
-    'focus-border': 1px solid custom.$color-primary,
-    'transparent-border': 0 0 0 1px transparent inset,
-    'border-color': custom.$color-border,
-    'border-radius': 4px,
-    'bg-color': custom.$color-background,
-    'icon-color': custom.$color-text-secondary,
-    'placeholder-color': custom.$color-text-secondary,
-    'hover-border-color': custom.$color-primary-light,
-    'clear-hover-color': custom.$color-text-secondary,
-    'focus-border-color': custom.$color-primary,
-    'width': 100%,
-  ),
-  
-  $input-disabled: (
-    'fill': custom.$color-disabled-bg,
-    'border': custom.$color-disabled-border,
-    'text-color': custom.$color-disabled-text,
-    'placeholder-color': custom.$color-text-secondary,
-  ),
-  
-  $checkbox: (
-    'font-size': custom.$font-size-base,
-    'font-weight': 500,
-    'text-color': custom.$color-text-primary,
-    'input-height': 14px,
-    'input-width': 14px,
-    'border-radius': 2px,
-    'bg-color': custom.$color-background,
-    'input-border': 1px solid custom.$color-border,
-    'disabled-border-color': custom.$color-disabled-border,
-    'disabled-input-fill': custom.$color-disabled-bg,
-    'disabled-icon-color': custom.$color-disabled-text,
-    'disabled-checked-input-fill': custom.$color-disabled-bg,
-    'disabled-checked-input-border-color': custom.$color-disabled-border,
-    'disabled-checked-icon-color': custom.$color-disabled-text,
-    'checked-text-color': custom.$color-primary,
-    'checked-input-border-color': custom.$color-primary,
-    'checked-bg-color': custom.$color-primary,
-    'checked-icon-color': #ffffff,
-    'input-border-color-hover': custom.$color-primary,
-  ),
-  
-  $radio: (
-    'font-size': custom.$font-size-base,
-    'text-color': custom.$color-text-primary,
-    'font-weight': 500,
-    'input-height': 14px,
-    'input-width': 14px,
-    'input-border-radius': 100%,
-    'input-bg-color': custom.$color-background,
-    'input-border': 1px solid custom.$color-border,
-    'input-border-color': custom.$color-border,
-    'input-border-color-hover': custom.$color-primary,
-  ),
-  
-  $select: (
-    'border-color-hover': custom.$color-primary-light,
-    'disabled-color': custom.$color-disabled-text,
-    'disabled-border': custom.$color-disabled-border,
-    'font-size': custom.$font-size-base,
-    'close-hover-color': custom.$color-text-secondary,
-    'input-color': custom.$color-text-secondary,
-    'multiple-input-color': custom.$color-text-primary,
-    'input-focus-border-color': custom.$color-primary,
-    'input-font-size': custom.$font-size-base,
-    'width': 100%,
-  ),
-  
-  $table: (
-    'border-color': custom.$color-border,
-    'border': 1px solid custom.$color-border,
-    'text-color': custom.$color-text-primary,
-    'header-text-color': custom.$color-text-secondary,
-    'row-hover-bg-color': custom.$color-secondary-200,
-    'current-row-bg-color': custom.$color-primary-light,
-    'header-bg-color': custom.$color-background,
-    'fixed-box-shadow': 0 0 10px rgba(0, 0, 0, 0.12),
-    'bg-color': custom.$color-background,
-    'tr-bg-color': custom.$color-background,
-    'expanded-cell-bg-color': custom.$color-background,
-    'fixed-left-column': inset 10px 0 10px -10px rgb(0 0 0 / 15%),
-    'fixed-right-column': inset -10px 0 10px -10px rgb(0 0 0 / 15%),
-    'index': 1,
-  ),
-  
-  $pagination: (
-    'font-size': custom.$font-size-base,
-    'bg-color': custom.$color-background,
-    'text-color': custom.$color-text-primary,
-    'border-radius': 2px,
-    'button-color': custom.$color-text-primary,
-    'button-width': 32px,
-    'button-height': 32px,
-    'button-disabled-color': custom.$color-disabled-text,
-    'button-disabled-bg-color': custom.$color-disabled-bg,
-    'button-bg-color': custom.$color-secondary-200,
-    'hover-color': custom.$color-primary,
-    'font-size-small': custom.$font-size-sm,
-    'button-width-small': 24px,
-    'button-height-small': 24px,
-    'button-width-large': 40px,
-    'button-height-large': 40px,
-    'item-gap': 16px,
-  ),
-  
-  $alert: (
-    'padding': 8px 16px,
-    'border-radius-base': 4px,
-    'title-font-size': custom.$font-size-base,
-    'title-with-description-font-size': custom.$font-size-lg,
-    'description-font-size': custom.$font-size-base,
-    'close-font-size': custom.$font-size-lg,
-    'close-customed-font-size': custom.$font-size-base,
-    'icon-size': 16px,
-    'icon-large-size': 28px,
-  ),
-  
-  $message: (
-    'bg-color': color.adjust(custom.$color-primary-light, $lightness: 5%),
-    'border-color': custom.$color-border,
-    'padding': 11px 15px,
-    'close-size': 16px,
-    'close-icon-color': custom.$color-text-secondary,
-    'close-hover-color': custom.$color-text-primary,
-  ),
-  
-  $notification: (
-    'width': 330px,
-    'padding': 14px 26px 14px 13px,
-    'radius': 8px,
-    'shadow': 0 0 12px rgba(0, 0, 0, 0.12),
-    'border-color': custom.$color-border,
-    'icon-size': 24px,
-    'close-font-size': 16px,
-    'group-margin-left': 13px,
-    'group-margin-right': 8px,
-    'content-font-size': custom.$font-size-base,
-    'content-color': custom.$color-text-primary,
-    'title-font-size': custom.$font-size-lg,
-    'title-color': custom.$color-text-primary,
-    'close-color': custom.$color-text-secondary,
-    'close-hover-color': custom.$color-text-primary,
-  ),
-  
-  $tag: (
-    'font-size': custom.$font-size-sm,
-    'border-radius': 4px,
-    'border-radius-rounded': 9999px,
-  ),
-  
-  $dialog: (
-    'width': 50%,
-    'margin-top': 15vh,
-    'bg-color': custom.$color-background,
-    'box-shadow': 0 12px 32px 4px rgba(0, 0, 0, 0.04) 0 8px 20px rgba(0, 0, 0, 0.08),
-    'title-font-size': custom.$font-size-lg,
-    'content-font-size': custom.$font-size-base,
-    'font-line-height': custom.$line-height-normal,
-    'padding-primary': 16px,
-    'border-radius': 4px,
-  )
+
+    $checkbox: (
+        'font-size': custom.$font-size-base,
+        'font-weight': 500,
+        'text-color': custom.$color-text-primary,
+        'input-height': 14px,
+        'input-width': 14px,
+        'border-radius': 2px,
+        'bg-color': custom.$color-background,
+        'input-border': 1px solid custom.$color-border,
+        'disabled-border-color': custom.$color-disabled-border,
+        'disabled-input-fill': custom.$color-disabled-bg,
+        'disabled-icon-color': custom.$color-disabled-text,
+        'disabled-checked-input-fill': custom.$color-disabled-bg,
+        'disabled-checked-input-border-color': custom.$color-disabled-border,
+        'disabled-checked-icon-color': custom.$color-disabled-text,
+        'checked-text-color': custom.$color-primary,
+        'checked-input-border-color': custom.$color-primary,
+        'checked-bg-color': custom.$color-primary,
+        'checked-icon-color': #ffffff,
+        'input-border-color-hover': custom.$color-primary
+    ),
+
+    $radio: (
+        'font-size': custom.$font-size-base,
+        'text-color': custom.$color-text-primary,
+        'font-weight': 500,
+        'input-height': 14px,
+        'input-width': 14px,
+        'input-border-radius': 100%,
+        'input-bg-color': custom.$color-background,
+        'input-border': 1px solid custom.$color-border,
+        'input-border-color': custom.$color-border,
+        'input-border-color-hover': custom.$color-primary
+    ),
+
+    $select: (
+        'border-color-hover': custom.$color-primary-light,
+        'disabled-color': custom.$color-disabled-text,
+        'disabled-border': custom.$color-disabled-border,
+        'font-size': custom.$font-size-base,
+        'close-hover-color': custom.$color-text-secondary,
+        'input-color': custom.$color-text-secondary,
+        'multiple-input-color': custom.$color-text-primary,
+        'input-focus-border-color': custom.$color-primary,
+        'input-font-size': custom.$font-size-base,
+        'width': 100%
+    ),
+
+    $table: (
+        'border-color': custom.$color-border,
+        'border': 1px solid custom.$color-border,
+        'text-color': custom.$color-text-primary,
+        'header-text-color': custom.$color-text-secondary,
+        'row-hover-bg-color': custom.$color-secondary-200,
+        'current-row-bg-color': custom.$color-primary-light,
+        'header-bg-color': custom.$color-background,
+        'fixed-box-shadow': 0 0 10px rgba(0, 0, 0, 0.12),
+        'bg-color': custom.$color-background,
+        'tr-bg-color': custom.$color-background,
+        'expanded-cell-bg-color': custom.$color-background,
+        'fixed-left-column': inset 10px 0 10px -10px rgb(0 0 0 / 15%),
+        'fixed-right-column': inset -10px 0 10px -10px rgb(0 0 0 / 15%),
+        'index': 1
+    ),
+
+    $pagination: (
+        'font-size': custom.$font-size-base,
+        'bg-color': custom.$color-background,
+        'text-color': custom.$color-text-primary,
+        'border-radius': 2px,
+        'button-color': custom.$color-text-primary,
+        'button-width': 32px,
+        'button-height': 32px,
+        'button-disabled-color': custom.$color-disabled-text,
+        'button-disabled-bg-color': custom.$color-disabled-bg,
+        'button-bg-color': custom.$color-secondary-200,
+        'hover-color': custom.$color-primary,
+        'font-size-small': custom.$font-size-sm,
+        'button-width-small': 24px,
+        'button-height-small': 24px,
+        'button-width-large': 40px,
+        'button-height-large': 40px,
+        'item-gap': 16px
+    ),
+
+    $alert: (
+        'padding': 8px 16px,
+        'border-radius-base': 4px,
+        'title-font-size': custom.$font-size-base,
+        'title-with-description-font-size': custom.$font-size-lg,
+        'description-font-size': custom.$font-size-base,
+        'close-font-size': custom.$font-size-lg,
+        'close-customed-font-size': custom.$font-size-base,
+        'icon-size': 16px,
+        'icon-large-size': 28px
+    ),
+
+    $message: (
+        'bg-color': color.adjust(custom.$color-primary-light, $lightness: 5%),
+        'border-color': custom.$color-border,
+        'padding': 11px 15px,
+        'close-size': 16px,
+        'close-icon-color': custom.$color-text-secondary,
+        'close-hover-color': custom.$color-text-primary
+    ),
+
+    $notification: (
+        'width': 330px,
+        'padding': 14px 26px 14px 13px,
+        'radius': 8px,
+        'shadow': 0 0 12px rgba(0, 0, 0, 0.12),
+        'border-color': custom.$color-border,
+        'icon-size': 24px,
+        'close-font-size': 16px,
+        'group-margin-left': 13px,
+        'group-margin-right': 8px,
+        'content-font-size': custom.$font-size-base,
+        'content-color': custom.$color-text-primary,
+        'title-font-size': custom.$font-size-lg,
+        'title-color': custom.$color-text-primary,
+        'close-color': custom.$color-text-secondary,
+        'close-hover-color': custom.$color-text-primary
+    ),
+
+    $tag: ('font-size': custom.$font-size-sm, 'border-radius': 4px, 'border-radius-rounded': 9999px),
+    $dialog: (
+        'width': 50%,
+        'margin-top': 15vh,
+        'bg-color': custom.$color-background,
+        'box-shadow': 0 12px 32px 4px rgba(0, 0, 0, 0.04) 0 8px 20px rgba(0, 0, 0, 0.08),
+        'title-font-size': custom.$font-size-lg,
+        'content-font-size': custom.$font-size-base,
+        'font-line-height': custom.$line-height-normal,
+        'padding-primary': 16px,
+        'border-radius': 4px
+    )
 );
