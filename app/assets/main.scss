@@ -1,6 +1,8 @@
-@use '_color';
-@use '_mixins';
-@use '_typography';
+@use 'color';
+@use 'mixins';
+@use 'typography';
+@use 'element-plus/variable' as *;
+
 
 body{
     margin: 0;

@@ -164,27 +164,3 @@ hr {
     @include mixins.status-text(color.$color-text-disabled);
   }
 }
-
-// ===== ДОПОЛНИТЕЛЬНЫЕ УТИЛИТЫ =====
-.text-sm{ font-size: color.$font-size-sm !important; }
-.text-lg{ font-size: color.$font-size-lg !important; }
-.text-xl{ font-size: color.$font-size-xl !important; }
-
-.text-light{ font-weight: 300 !important; }
-.text-regular{ font-weight: 400 !important; }
-.text-medium{ font-weight: 500 !important; }
-.text-bold{ font-weight: 700 !important; }
-
-.text-primary { color: color.$color-text-primary !important; }
-.text-secondary { color: color.$color-text-secondary !important; }
-.text-accent { color: color.$color-text-accent !important; }
-.text-success { color: color.$color-text-success !important; }
-.text-warn { color: color.$color-text-warn !important; }
-.text-error { color: color.$color-text-error !important; }
-.text-disabled { color: color.$color-text-disabled !important; }
-
-.bg-primary { background-color: color.$color-primary-light !important; }
-.bg-success { background-color: color.$color-success-light !important; }
-.bg-warn { background-color: color.$color-warn-light !important; }
-.bg-error { background-color: color.$color-error-light !important; }
-.bg-disabled { background-color: color.$color-disabled-bg !important; }

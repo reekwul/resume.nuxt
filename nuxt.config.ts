@@ -1,34 +1,34 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import Aura from '@primeuix/themes/aura';
 
 
 export default defineNuxtConfig({
     compatibilityDate: '2025-07-15',
     devtools: { enabled: true },
 
-    modules: ['@nuxt/eslint', "@primevue/nuxt-module", '@nuxt/image', '@nuxt/test-utils', '@nuxt/fonts', '@pinia/nuxt'],
+    modules: ['@nuxt/eslint', '@element-plus/nuxt', '@nuxt/image', '@nuxt/test-utils', '@nuxt/fonts', '@pinia/nuxt'],
     
-    css:['./assets/main.scss'],
+    css:[ ],
 
-    primevue: {
-      components:{
-        prefix: "C",
-      },
-        options: {
-            unstyled: true,
-            ripple: true,
-            inputVariant: 'filled',
-        }
-    },
-
+    elementPlus: {
+    importStyle: 'scss',
+  },
     vite: {
+      optimizeDeps: {
+      include: [
+        '@element-plus/icons-vue'
+      ]
+    },
     css: {
       preprocessorOptions: {
         scss: {
           additionalData: `
+            @use "./assets/main.scss" as *;
           `
         }
       }
     }
-  }
+  },
+   build: {
+    transpile: ['element-plus']
+  },
 });
