@@ -13,7 +13,9 @@ export default defineNuxtConfig({
         '@pinia/nuxt',
     ],
 
-    css: [],
+    imports: {
+        dirs: ['app/constants'],
+    },
 
     elementPlus: {
         importStyle: 'scss',
