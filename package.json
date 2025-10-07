@@ -4,7 +4,7 @@
     "private": true,
     "scripts": {
         "build": "nuxt build",
-        "dev": "nuxt dev --fix",
+        "dev": "nuxt dev",
         "generate": "nuxt generate",
         "preview": "nuxt preview",
         "postinstall": "nuxt prepare",
@@ -14,13 +14,16 @@
         "format:check": "prettier --check .",
         "typecheck": "nuxt typecheck",
         "code:check": "npm run lint && npm run format:check",
-        "code:fix": "npm run lint:fix && npm run format"
+        "code:fix": "npm run lint:fix && npm run format",
+        "lint-staged": "lint-staged",
+        "typecheck:staged": "nuxt typecheck --force"
     },
     "dependencies": {
         "@element-plus/icons-vue": "^2.3.2",
         "@pinia/nuxt": "^0.11.2",
         "element-plus": "^2.11.3",
         "nuxt": "^4.1.1",
+        "nuxt-auth-utils": "^0.5.25",
         "pinia": "^3.0.3",
         "vue": "^3.5.20",
         "vue-router": "^4.5.1"
@@ -31,15 +34,27 @@
         "@nuxt/fonts": "^0.11.4",
         "@nuxt/image": "^1.11.0",
         "@nuxt/test-utils": "^3.19.2",
+        "@types/cookie": "^1.0.0",
+        "@types/node": "^24.7.0",
         "eslint": "^9.35.0",
         "pre-commit": "^1.2.2",
         "prettier": "^3.5.3",
         "sass": "^1.92.1",
         "sass-loader": "^16.0.5",
-        "typescript": "^5.9.2"
+        "typescript": "^5.9.2",
+        "vue-tsc": "^3.1.1"
     },
     "pre-commit": [
-        "typecheck",
-        "code:check"
-    ]
+        "typecheck:staged",
+        "lint-staged"
+    ],
+    "lint-staged": {
+        "**/*.{js,ts,vue}": [
+            "eslint --fix",
+            "prettier --write"
+        ],
+        "**/*.{css,scss,json,md}": [
+            "prettier --write"
+        ]
+    }
 }

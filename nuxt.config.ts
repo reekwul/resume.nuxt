@@ -11,7 +11,16 @@ export default defineNuxtConfig({
         '@nuxt/test-utils',
         '@nuxt/fonts',
         '@pinia/nuxt',
+        'nuxt-auth-utils',
     ],
+
+    typescript: {
+        typeCheck: true,
+        strict: true,
+        shim: true,
+    },
+
+    runtimeConfig: {},
 
     imports: {
         dirs: ['app/constants'],
