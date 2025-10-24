@@ -1,13 +1,13 @@
 import { defineStore } from 'pinia';
 
 interface User {
-    name: string;
+  name: string;
 }
 
 export const useUserStore = defineStore('userStore', () => {
-    const user: Ref<null | User> = useState('user', () => null);
+  const user: Ref<null | User> = useState('user', () => null);
 
-    return {
-        user,
-    };
+  return {
+    user,
+  };
 });

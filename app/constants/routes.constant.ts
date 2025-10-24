@@ -4,8 +4,8 @@ const ROUTE_COLORS = '/disign/colors';
 const ROUTE_TYPOGRAPHY = '/disign/typography';
 
 export default {
-    ROUTE_HOME,
-    ROUTE_LIBRARY,
-    ROUTE_COLORS,
-    ROUTE_TYPOGRAPHY,
+  ROUTE_HOME,
+  ROUTE_LIBRARY,
+  ROUTE_COLORS,
+  ROUTE_TYPOGRAPHY,
 };

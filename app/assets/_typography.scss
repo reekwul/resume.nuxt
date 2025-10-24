@@ -4,10 +4,10 @@
 // _typography.scss
 // ===== БАЗОВЫЕ НАСТРОЙКИ =====
 body {
-    @include mixins.text-styles;
-    background-color: color.$color-background;
-    margin: 0;
-    padding: color.$spacing-md;
+  @include mixins.text-styles;
+  background-color: color.$color-background;
+  margin: 0;
+  padding: color.$spacing-md;
 }
 
 // ===== ЗАГОЛОВКИ =====
@@ -17,156 +17,156 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: color.$font-heading;
-    font-weight: 700;
-    line-height: color.$line-height-tight;
-    margin-top: 0;
-    color: color.$color-text-primary;
+  font-family: color.$font-heading;
+  font-weight: 700;
+  line-height: color.$line-height-tight;
+  margin-top: 0;
+  color: color.$color-text-primary;
 }
 
 h1 {
-    @include mixins.heading-styles(color.$font-size-4xl, 700, -0.5px, color.$spacing-md);
+  @include mixins.heading-styles(color.$font-size-4xl, 700, -0.5px, color.$spacing-md);
 }
 
 h2 {
-    @include mixins.heading-styles(color.$font-size-3xl, 600, 0px, color.$spacing-sm);
+  @include mixins.heading-styles(color.$font-size-3xl, 600, 0px, color.$spacing-sm);
 }
 
 h3 {
-    @include mixins.heading-styles(color.$font-size-2xl, 600, 0px, color.$spacing-sm);
+  @include mixins.heading-styles(color.$font-size-2xl, 600, 0px, color.$spacing-sm);
 }
 
 h4 {
-    @include mixins.heading-styles(color.$font-size-xl, 500, 0px, color.$spacing-xs);
-    color: color.$color-text-secondary;
+  @include mixins.heading-styles(color.$font-size-xl, 500, 0px, color.$spacing-xs);
+  color: color.$color-text-secondary;
 }
 
 h5 {
-    @include mixins.heading-styles(color.$font-size-lg, 500, 0px, color.$spacing-xs);
-    color: color.$color-text-secondary;
+  @include mixins.heading-styles(color.$font-size-lg, 500, 0px, color.$spacing-xs);
+  color: color.$color-text-secondary;
 }
 
 h6 {
-    @include mixins.heading-styles(color.$font-size-base, 500, 1px, color.$spacing-xs);
-    color: color.$color-text-accent;
-    text-transform: uppercase;
+  @include mixins.heading-styles(color.$font-size-base, 500, 1px, color.$spacing-xs);
+  color: color.$color-text-accent;
+  text-transform: uppercase;
 }
 
 // ===== ТЕКСТ И ССЫЛКИ =====
 p {
-    @include mixins.text-styles;
-    margin: 0 0 color.$spacing-md 0;
+  @include mixins.text-styles;
+  margin: 0 0 color.$spacing-md 0;
 }
 
 a {
-    @include mixins.text-styles($color: color.$color-text-accent);
-    text-decoration: underline;
+  @include mixins.text-styles($color: color.$color-text-accent);
+  text-decoration: underline;
 
-    &:not(.button):hover {
-        color: color.$color-primary-hover;
-        text-decoration: none;
-    }
+  &:not(.button):hover {
+    color: color.$color-primary-hover;
+    text-decoration: none;
+  }
 }
 
 // ===== СПИСКИ =====
 ul,
 ol {
-    @include mixins.text-styles;
-    margin: 0 0 color.$spacing-md 0;
-    padding-left: color.$spacing-lg;
+  @include mixins.text-styles;
+  margin: 0 0 color.$spacing-md 0;
+  padding-left: color.$spacing-lg;
 }
 
 li {
-    margin: color.$spacing-xs 0;
+  margin: color.$spacing-xs 0;
 }
 
 // ===== ЦИТАТЫ =====
 blockquote {
-    @include mixins.text-styles(color.$font-size-lg, 400, 1.5, color.$color-text-secondary);
-    font-style: italic;
-    margin: color.$spacing-lg 0;
-    padding-left: color.$spacing-lg;
-    border-left: 4px solid color.$color-border;
-    background: color.$color-secondary-light;
-    padding: color.$spacing-md;
-    border-radius: 4px;
+  @include mixins.text-styles(color.$font-size-lg, 400, 1.5, color.$color-text-secondary);
+  font-style: italic;
+  margin: color.$spacing-lg 0;
+  padding-left: color.$spacing-lg;
+  border-left: 4px solid color.$color-border;
+  background: color.$color-secondary-light;
+  padding: color.$spacing-md;
+  border-radius: 4px;
 }
 
 // ===== КОД =====
 code {
-    font-family: color.$font-mono;
-    font-size: 0.9em;
-    background: color.$color-code-bg;
-    padding: 0.1em 0.3em;
-    border-radius: 3px;
-    color: color.$color-text-primary;
+  font-family: color.$font-mono;
+  font-size: 0.9em;
+  background: color.$color-code-bg;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  color: color.$color-text-primary;
 }
 
 pre {
-    font-family: color.$font-mono;
-    font-size: color.$font-size-sm;
-    line-height: 1.5;
-    background: color.$color-code-bg;
-    padding: color.$spacing-md;
-    overflow: auto;
-    border-radius: 5px;
-    margin: color.$spacing-md 0;
-    border: 1px solid color.$color-border;
+  font-family: color.$font-mono;
+  font-size: color.$font-size-sm;
+  line-height: 1.5;
+  background: color.$color-code-bg;
+  padding: color.$spacing-md;
+  overflow: auto;
+  border-radius: 5px;
+  margin: color.$spacing-md 0;
+  border: 1px solid color.$color-border;
 }
 
 // ===== РАЗДЕЛИТЕЛЬ =====
 hr {
-    border: 0;
-    border-top: 1px solid color.$color-border;
-    margin: color.$spacing-xl 0;
+  border: 0;
+  border-top: 1px solid color.$color-border;
+  margin: color.$spacing-xl 0;
 }
 
 // ===== КНОПКИ =====
 .button {
-    @include mixins.button-styles;
+  @include mixins.button-styles;
 
-    &--secondary {
-        @include mixins.button-styles(color.$color-secondary, color.$color-text-primary);
+  &--secondary {
+    @include mixins.button-styles(color.$color-secondary, color.$color-text-primary);
+  }
+
+  &--success {
+    @include mixins.button-styles(color.$color-success, white);
+  }
+
+  &--warn {
+    @include mixins.button-styles(color.$color-warn, white);
+  }
+
+  &--error {
+    @include mixins.button-styles(color.$color-error, white);
+  }
+
+  &--outline {
+    @include mixins.button-styles(transparent, color.$color-primary);
+    border: 2px solid color.$color-primary;
+
+    &:hover:not(:disabled) {
+      background: color.$color-primary;
+      color: white;
     }
-
-    &--success {
-        @include mixins.button-styles(color.$color-success, white);
-    }
-
-    &--warn {
-        @include mixins.button-styles(color.$color-warn, white);
-    }
-
-    &--error {
-        @include mixins.button-styles(color.$color-error, white);
-    }
-
-    &--outline {
-        @include mixins.button-styles(transparent, color.$color-primary);
-        border: 2px solid color.$color-primary;
-
-        &:hover:not(:disabled) {
-            background: color.$color-primary;
-            color: white;
-        }
-    }
+  }
 }
 
 // ===== СТАТУСНЫЕ ТЕКСТЫ =====
 .text-status {
-    &--success {
-        @include mixins.status-text(color.$color-text-success);
-    }
+  &--success {
+    @include mixins.status-text(color.$color-text-success);
+  }
 
-    &--warn {
-        @include mixins.status-text(color.$color-text-warn);
-    }
+  &--warn {
+    @include mixins.status-text(color.$color-text-warn);
+  }
 
-    &--error {
-        @include mixins.status-text(color.$color-text-error);
-    }
+  &--error {
+    @include mixins.status-text(color.$color-text-error);
+  }
 
-    &--disabled {
-        @include mixins.status-text(color.$color-text-disabled);
-    }
+  &--disabled {
+    @include mixins.status-text(color.$color-text-disabled);
+  }
 }

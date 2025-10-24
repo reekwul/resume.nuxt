@@ -1,3 +1,4 @@
 <template>
-    <HeaderNavigation />
+  <HeaderNavigation />
 </template>
+<script lang="ts" setup></script>
